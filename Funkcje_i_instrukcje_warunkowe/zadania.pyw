@@ -24,10 +24,18 @@ def zadania3():
 	n = int(input("Podaj liczbe: "))
 	if n > 2000000 or n < 1:
 		return 0
-	
-	i = int(n/5)
-	
-	i = i + (int(n/25))
+	result = 0
+	sil = 1
+	for i in range(1, n + 1):
+		sil *= i
 
-	return i
-		
+	sil = str(sil)
+
+	for x in range(len(sil)-1, 1, -1):
+		print(len(sil), x)
+		if sil[x] != "0":
+			return result
+		result += 1
+	return result
+
+print(zadania3())
