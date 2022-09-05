@@ -21,21 +21,23 @@ def zadanie2():
 	return str_silnia[-1]
 
 def zadania3():
-	n = int(input("Podaj liczbe: "))
-	if n > 2000000 or n < 1:
-		return 0
+	user_input = int(input("Podaj liczbe: ")) 
+	dzielniki = []
+	current = 0
+	result = 1
+	while True:
+		result = 5
+		current += 1
+		for x in range(1, current):
+			result *= 5
+		if result > user_input:
+			break
+		dzielniki.append(result)
 	result = 0
-	sil = 1
-	for i in range(1, n + 1):
-		sil *= i
+	for dziel in dzielniki:
+		result = result + ( user_input / dziel ) 
+	return F"{int(result)} Ilosc zer"/ x
 
-	sil = str(sil)
 
-	for x in range(len(sil)-1, 1, -1):
-		print(len(sil), x)
-		if sil[x] != "0":
-			return result
-		result += 1
-	return result
 
 print(zadania3())
