@@ -36,7 +36,7 @@ def zadania3():
 	result = 0
 	for dziel in dzielniki:
 		result = result + ( user_input / dziel ) 
-	return F"{int(result)} Ilosc zer"/ x
+	return F"{int(result)} Ilosc zer"
 
 
 
