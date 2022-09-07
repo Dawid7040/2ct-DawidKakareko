@@ -6,11 +6,11 @@ def zadania1(numbers:list, k:int):
             debug += 1
             print(debug)
             if numbers[i] + tester[j] == k and not i==j:
+
                 return True
         tester.pop(0)
     return False
 
-print(zadania1([5,7,4,4], 10))
 
 def zadanie2(str1):
     
@@ -39,5 +39,5 @@ def zadania3(actions:list):
                 records = (actions[i], actions[j], actions[j] - actions[i])
     return records
 
-print(zadania3([20,10,13,17,15]))
+
             
