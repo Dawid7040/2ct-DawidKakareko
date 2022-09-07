@@ -23,11 +23,8 @@ def zadanie2():
 def zadania3():
 	user_input = int(input("Podaj liczbe: ")) 
 	dzielniki = []
-	current = 0
-	result = 1
-	while True:
+	for current in range(1,100000):
 		result = 5
-		current += 1
 		for x in range(1, current):
 			result *= 5
 		if result > user_input:
