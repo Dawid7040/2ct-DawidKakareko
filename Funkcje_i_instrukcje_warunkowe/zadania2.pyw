@@ -1,14 +1,16 @@
 def zadania1(numbers:list, k:int):
+    tester = numbers.copy()
     debug = 0
     for i in range(len(numbers)):
-        for j in range(len(numbers)):
+        for j in range(len(tester)):
             debug += 1
             print(debug)
-            if numbers[i] + numbers[j] == k and not numbers[i] == numbers[j]:
+            if numbers[i] + tester[j] == k and not i==j:
                 return True
-
+        tester.pop(0)
     return False
-print(zadania1([5,7,4,6], 235235))
+
+print(zadania1([5,7,4,4], 10))
 
 def zadanie2(str1):
     
