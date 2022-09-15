@@ -31,4 +31,17 @@ def reventnumber():
         number = int(input("Podaj liczbę dodatnią: "))  
         if not number < 0: return number     
 
-reventnumber()
+
+def is_happy_number():
+    n = int(input("Podaj liczę: "))
+    while n > 1:
+        r = str(n)
+        n = 0
+        for i in r:
+            n += int(i) * int(i)
+    if n == 1:
+        return True
+    return False
+
+print(is_happy_number())
+            
