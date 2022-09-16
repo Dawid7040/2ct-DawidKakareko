@@ -28,16 +28,15 @@ def zadanie2(str1):
 
 
 def zadania3(actions:list):
-    min_buy = min(actions)
-    max_buy = max(actions)
     records = (0,0,0)
     for i in range(len(actions)): # Buy
         for j in range(len(actions)): # Sell
             if actions[j] - actions[i] <= 0: 
                 continue
-            if actions[j] - actions[i] > records[2] and  j > i: 
+            if actions[j] - actions[i] > records[2] and j > i: 
                 records = (actions[i], actions[j], actions[j] - actions[i])
     return records
 
+print(zadania3([8,10,7,5,7,15]))
 
             
