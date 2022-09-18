@@ -34,11 +34,15 @@ def reventnumber():
 
 def is_happy_number():
     n = int(input("Podaj liczę: "))
+    times = 0
     while n > 1:
+        times += 1
         r = str(n)
         n = 0
         for i in r:
             n += int(i) * int(i)
+        if times > 999:
+            break
     if n == 1:
         return True
     return False
